@@ -1,0 +1,567 @@
+@charset "UTF-8";
+
+body{
+    background-color: #FBF9F3;
+}
+html {
+    font-size: 100%;
+    color: #5c3924;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ----------共通点----------- */
+
+
+img {
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: #6B4126;
+}
+
+li {
+    list-style: none;
+}
+
+p{
+    font-size: 0.9rem;
+}
+
+/* ------------------ヘッター----------------------- */
+header{
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    width: 100%;
+    background-color:#ffcc00;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.header-logo {
+    width: 150px;
+    padding: 5px 10px;
+}
+
+header .menu{
+    display: flex;
+}
+
+header .menu li{
+    margin: 0 30px;
+}
+
+header .menu li:hover{
+    transform: scale(1.1);
+    font-weight: 600;
+    border-bottom: 1px solid #6B4126;
+}
+
+.hamburger{
+    display: none;
+}
+
+#mask{
+    display: none;
+}
+/* -----------------モデルコース-------------------- */
+.model-course{
+     margin-top: 200px;
+}
+
+.model-title{
+    text-align: center;
+}
+
+.headline{
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.tab-headline,
+.last-headline{
+    display: flex;
+    align-items: center;
+    margin-top: 50px 0;
+    padding-left: 10px;
+    position: relative;
+}
+
+.tab-headline{
+    font-size: 1.2rem;
+}
+
+/* ---------day2(finish)------------- */
+
+.last-headline{
+    position: relative;
+    font-size: 1rem;
+}
+
+.last-headline img{
+    width: 40px;
+}
+
+.last-headline::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    border: 1.5px dashed  #6B4126;   
+}
+
+
+.day-lead{
+  margin-left:30px;
+  font-weight: bold;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+
+.tab-headline img{
+    width: 40px;
+
+}
+
+.tab-headline::after{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    border: 1.5px dashed  #6B4126;
+
+    
+}
+/* -------タブ設定---------- */
+
+/* タブ全体を包むコンテンツの設定 */
+.tab-switch{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 100px auto;
+    padding: 0 10px;
+}
+
+.tab-switch:after{
+    content: "";
+    width: 100px;
+    height: 1px;
+    order:-1;
+    margin-top: -5px;
+}
+
+/* 各タブボタンの設定 */
+/* 「>」 は、 .tab-switchの近くにあるlabelの事*/
+.tab-switch > label {
+    font-size: 1.3rem;
+    width: 200px;
+    order: -1;
+    position: relative;
+    padding: 5px 0px;
+    margin-left: 10px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border: 2px solid #623C25;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    text-transform: 2s all;
+}
+
+/* ラベルをクリックした時の色の設定【選択したラベルの背景色と文字カラー】 */
+.tab-switch label:has(:checked) {
+    background-color: #FFE26E;
+}
+
+/* ラジオボタンの非表示 */
+.tab-switch input {
+    display: none;
+}
+
+/* .tab-contentの中身の設定と内容の非表示*/
+.tab-switch >div{
+    display: none;
+    border:2px solid #623C25;
+    width: 100%;
+    background-color: white;
+    padding: 30px 20px;
+}
+
+/* checkedを選択時にdisplay: none;の解除と選択したdivの内容の表示設定 */
+.tab-switch label:has(:checked) + div {
+    display: block;
+}
+
+/* ------------------------------------------
+                 day1
+-------------------------------------------- */
+.tab-content {
+    margin-bottom: 50px;
+}
+
+.tab-content li {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* ----------左側--------------- */
+
+.tab-left {
+    text-align: center;
+    width: 15%;
+}
+
+
+.tab-left img{
+    width: 70px;
+}
+
+
+.tab-left p {
+    margin-top: 5px;
+    font-size: 1.4rem;
+    
+}
+
+/* ---------------右側------------- */
+.tab-right {
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border: 2px solid #623C25;
+    border-radius: 10px;
+ 
+}
+
+
+.title{
+    position: relative;
+    font-size: 1.4rem;
+}
+
+.title::before{
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 250px;
+    height: 1.5px;
+    background-color: #5c3924;    
+}
+
+
+
+.tab-right span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color:#D15E30;
+}
+
+.spot-text {
+    margin-top: 15px;
+    width: 50%;
+    
+}
+
+.spot-text p{
+    margin-top: 15px;
+    width: 100%;
+    
+}
+
+
+.spot-img {
+    width: 50%;
+    margin: 20px 0 0 10px;  
+}
+
+.spot-img img{
+    width: 100%; 
+    object-fit: cover;  
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+/* トップスライド */
+.top-btn{
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f8da61;
+}
+
+.top-btn::after{
+    position: relative;
+    left: 16px;
+    bottom: 10px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent transparent #6B4126 transparent;
+    border-width: 0px 15px 28px 15px;
+    }
+
+
+/* --------- フッター --------------- */
+footer {
+    padding: 10px;
+    background-color: #ffcc00;
+}
+footer ul{
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 0.85rem;
+}
+
+footer p{
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* ---------------レスポンシブ----------------------- */
+
+@media(max-width:720px ){
+
+header a{
+    font-size: 1.2rem;
+}
+/* ハンバーガーメニュー */
+
+    /* ボックス作成 */
+.hamburger{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 30;
+    display: block;
+}
+
+/* ハンバーガー三本線の作成 */
+.hamburger span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    transition: all 0.5s;
+    z-index: 25px;
+}
+
+/* 三本線の位置設定 */
+
+.hamburger span:nth-child(1){
+    top: 30%;
+}
+
+.hamburger span:nth-child(2){
+    top: 60%;
+}
+
+.hamburger span:nth-child(3){
+     top: 90%;
+}
+
+/* クリック三本線の設定 */
+
+.open .hamburger span:nth-child(1){
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+.open .hamburger span:nth-child(2){
+     opacity: 0;
+}
+
+.open .hamburger span:nth-child(3){
+     top: 50%;
+    transform: rotate(45deg);
+    }
+
+#nav{
+        position: fixed;
+        z-index: 20;
+        top: 0;
+        right: -300px;
+        padding: 20px 30px;
+        width: 250px;
+        height: 100vh;
+        transition: 0.5s;
+        text-align: center;
+        opacity: 0;
+        background-color: #F9ECD3;
+        /* border-radius: 50px 0 0 50px; */
+    }
+
+    .open #nav{
+        opacity: 1;
+        right:0;
+    }
+
+    
+
+    header .menu{
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .menu li{
+        margin: 0 0 20px 0 ;
+        padding: 30px 10px 0 10px;
+        
+
+    }
+
+    .open #mask{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0.8;
+        /* opacity: 0.8;で背景色を薄める */
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background-color: #000000;
+    }
+
+    #mask{
+        display: none;
+        transition: 0.5s;
+    }
+
+/* ----------------------------------------------- */
+    .p{
+        font-size: 0.9rem;
+    }
+
+    .tab-headline h2{
+        font-size: 1.4rem;
+    }
+
+    .day-lead{
+    margin-left:0px;
+    font-weight: bold;
+    line-height: 1.7;
+    font-size: 1rem;
+    }
+
+    .tab-switch > label {
+    width: 130px;
+ 
+    }
+
+    .model-course{
+     margin-top: 150px;
+    }
+
+    .headline{
+        font-size: 1.5rem;
+    }
+
+    .tab-content li {
+    display: flex;
+    justify-content: normal;
+    flex-flow: column;
+    width: 100%;
+    margin-top: 20px;
+    }
+
+    .tab-left {
+    display:flex;
+    align-items: center;
+    margin: 5px 0;
+    width: 20%;
+    }
+
+    .tab-left p {
+        padding: 10px;
+        font-size: 1.6rem;
+    }
+
+    .tab-right {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: normal;
+    padding: 20px 10px;
+    border: 2px solid #623C25;
+    border-radius: 10px;
+    }
+
+    .spot-text {
+    width: 100%;
+    
+    }
+     .spot-text p{
+        width: 100%;
+        margin: 10px 0;
+        
+    }
+
+    .spot-img {
+        width: 100%;
+        margin: auto;
+    }
+
+    /* トップスライド */
+    .top-btn{
+        bottom: 75px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
