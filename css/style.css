@@ -2,12 +2,12 @@
 
 body{
     background-color: #FBF9F3;
+    font-family: "Noto Sans JP", sans-serif;
 }
 
 html {
     font-size: 100%;
     color: #6B4126;
-    font-family:  normal normal normal 62.5% / 1 "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", 'Open Sans', osaka, Arial, Verdana, sans-serif;;
   }
 
 *{
@@ -340,7 +340,12 @@ header .menu li:hover{
     left: 10%;
 }
 
-
+.alert{
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: brown;
+    font-weight: bold;
+}
 
 /* ---------------お土産情報------------------------ */
 
